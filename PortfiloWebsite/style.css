@@ -1,0 +1,253 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 3px solid orange;
+}
+
+.logo span:first-child {
+    color: orange;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logo span:last-child {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* Contact Button */
+.contact {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact:hover {
+    background-color: #ff9900;
+}
+
+/* Toggle Switch */
+.theme-toggle {
+    margin-left: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: orange;
+    border-radius: 24px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: black;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #ccc;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Section Flex Container */
+.section-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Text content */
+.text-content {
+    max-width: 300px;
+    justify-content: left;
+}
+
+/* Images on right side */
+.img-box, .About-img {
+   display: flex;
+   justify-content: space-between center;
+   align-items: left;
+}
+
+.img-box img,
+.About-img img {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.6); /* soft orange glow */
+}
+
+/* Buttons */
+.btn-box button, .btn-2, .btn-1 {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px 10px 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-box button:hover, .btn-2:hover, .btn-1:hover {
+    background-color: #ff9900;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: orange;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Contact Form Inputs */
+.input-box input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    border-top: 3px solid orange;
+    padding: 30px 0 10px 0;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-social-icons {
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    color: orange;
+    font-size: 28px;
+    margin: 0 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .section-flex {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .img-box, .About-img {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .footer {
+        padding: 20px 0 8px 0;
+    }
+    .footer-social-icons a {
+        font-size: 24px;
+        margin: 0 8px;
+    }
+
+}
