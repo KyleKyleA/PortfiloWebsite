@@ -1,5 +1,5 @@
 /* Reset */
-* {
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -250,4 +250,46 @@ ul {
         margin: 0 8px;
     }
 
+}
+
+/* --- Begin CSS from style.css --- */
+.skill-with-bar {
+    margin-bottom: 18px;
+}
+
+.skill-item {
+    display: inline-block;
+    min-width: 90px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    background: #111;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 18px;
+    border: 1px solid orange;
+}
+
+.skill-bar {
+    position: relative;
+    background: #ffa500;
+    border-radius: 8px;
+    height: 30px;
+    width: 300px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.skill-bar-fill {
+    background: #222;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+}
+
+.skill-percent {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-weight: bold;
 }
