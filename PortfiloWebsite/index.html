@@ -151,8 +151,8 @@ REGION FUNCTION
                 <br> 
 
                 <div class="btn-box">
-                    <button>Hire me and why</button>
-                    <button>Projects</button>
+                   <button onclick="hireMeClicked()">Hire me and why</button>
+                   <button onclick="projectsClicked()">Projects</button>
                 </div>
             </div>
         </section>
@@ -317,6 +317,13 @@ REGION FUNCTION
                 document.body.classList.add('dark-mode');
             }
         });
+
+         function hireMeClicked() {
+        alert("Hire Me button clicked! You can add your custom action here.");
+    }
+    function projectsClicked() {
+        alert("Projects button clicked! You can add your custom action here.");
+    }
     </script>
     </body>
     
