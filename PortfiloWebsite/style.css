@@ -547,9 +547,24 @@ ul {
     }
 }
 
+/*Styling for the language icons */
+
 .skill-icon {
     width: 24px;
     height: 24px;
     vertical-align: middle;
     margin-right: 8px;
+    animation: iconGlow 1.5s infinite alternate;
+}
+
+@keyframes iconGlow {
+    0% {
+        filter: drop-shadow(0 0 0px orange);
+        transform: scale(1);
+    }
+    100% {
+        filter: drop-shadow(0 0 12px orange);
+        transform: scale(1.15);
+    }
+    
 }
