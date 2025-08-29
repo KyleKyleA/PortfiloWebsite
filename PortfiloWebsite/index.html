@@ -32,6 +32,25 @@ REGION FUNCTION
                 background: #f5f5f5;
                 color: #181818;
             }
+            .animated-header {
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeSlideIn 1.2s ease-out infinite;
+            }
+            @keyframes fadeSlideIn {
+             0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            50% {
+            opacity: 1;
+            transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+        }
         </style>
     
         
@@ -47,7 +66,7 @@ REGION FUNCTION
             Navigation bar for employer trying to look at my portfolio
             -->
             <nav class="navbar">
-                <a href="#">Portfilo</a>
+                <a href="#">Portfolio</a>
                 <a href="#">Services</a>
                 <a href="#">Projects</a>
                 <a href="#">Skills</a>
@@ -57,6 +76,7 @@ REGION FUNCTION
             Added a cool feature beside the contact me button and added a light mode and dark mode for the user 
             -->
              <a href="#" class="contact">Contact Me</a>
+
              <div class="light-dark toggle">
                 <label class="switch">
                     <input type="checkbox" id="toggle">
@@ -71,14 +91,13 @@ REGION FUNCTION
         <section class="home">
             <div class="home-infortmation">
 
-                <h1>Hello <span>I'm Kyle<br></span>I a computer science student</h1>
+                <h1 class="animated-header">Hello <span>I'm Kyle<br></span>I a computer science student</h1>
                 <br>
-                <p class="align-right">
+                <p class="align-left">
                     Currently I'm a second year at Durham College taking computer science and I'm 18 years old with 
                     with somewhat experience in programming and doing some web development. I have a passion for coding 
                     or development since taking a computer science class in high school and i want to pursue a career either 
                     in software engineering or computer engineering designing hardware and software for computers. 
-                </p>
                 </p>
                 <br>
                  <div class="About-img">
@@ -88,8 +107,8 @@ REGION FUNCTION
                 <br> 
 
                 <div class="btn-box">
-                    <button>Why should you hire me</button>
-                    <button>Projects/Experiences</button>
+                    <button>Hire me and why</button>
+                    <button>Projects</button>
                 </div>
             </div>
         </section>
@@ -99,11 +118,10 @@ REGION FUNCTION
 
         <br>
         <div class="about-flex">
-    <section class="about-me">
+        <section class="about-me">
         <div class="about-me content">    
             <h3>Things about me</h3>
             <h3>As a computer science student</h3>
-            <br>
             <b><p>In, my free time I like to do is:</p></b>
             <ul>
                 <li>Coding in my free time</li>
@@ -112,13 +130,13 @@ REGION FUNCTION
                 <li>Content Creation</li>
                 <li>Listening to music</li>
             </ul>
-            <p class="align-right">This just samples and explains my extracurrliers or hobbies i have outside of coding and doing school work that balances my workflow and social life with others </p>
+            <p class="align-left">This just samples and explains my extracurricular or hobbies i have outside of coding and doing school work that balances my workflow and social life with others. </p>
             <br>
             <a href="#" class="btn-2">Experiences</a>  
         </div>      
     </section>
     <div class="about-img-right">
-        <img src="images/your-new-image.jpg" alt="About Me Extra Image">
+        <img src="images/image1 (1).jpg" alt="About Me Extra Image">
     </div>
 </div>
         <br>

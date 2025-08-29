@@ -456,8 +456,8 @@ ul {
 /* About me section - positioned below the main content */
 .about-flex {
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    align-items: left; /* Center vertically */
+    justify-content: left; /* Center horizontally */
     gap: 40px;
     max-width: 1100px;
     margin: 40px auto;
