@@ -36,7 +36,18 @@ REGION FUNCTION
                 opacity: 0;
                 transform: translateY(30px);
                 animation: fadeSlideIn 1.2s ease-out infinite;
+                font-weight: bold;
+                color: orange;
+                text-shadow: 0 0 10px, orange, 0 0 20px orange, 0 0 40px orange;
+                transition: text-shadow 0.3s ;
             }
+
+            body.light-mode .animated-header {
+                color: #000;
+                text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 40px #000;
+            }
+
+           
             @keyframes fadeSlideIn {
              0% {
                 opacity: 0;
