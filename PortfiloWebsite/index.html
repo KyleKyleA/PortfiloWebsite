@@ -23,6 +23,10 @@ REGION FUNCTION
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="style.css">
         
+        <!--
+        This is just a short line of code of the css file that controls the toggle button 
+        and animates the header sliding in and out of position 
+        -->
         <style>
             body.dark-mode {
                 background: #181818;
@@ -62,6 +66,35 @@ REGION FUNCTION
                 transform: translateY(30px);
             }
         }
+
+            @keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.slide-in-left {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+}
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.slide-in-right {
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+    }
         </style>
     
         
@@ -100,7 +133,7 @@ REGION FUNCTION
         Home Information section a quick intro about me and a image of me  
         -->
         <section class="home">
-            <div class="home-infortmation">
+            <div class="home-infortmation slide-in-left">
 
                 <h1 class="animated-header">Hello <span>I'm Kyle<br></span>I a computer science student</h1>
                 <br>
@@ -129,7 +162,7 @@ REGION FUNCTION
 
         <br>
         <div class="about-flex">
-        <section class="about-me">
+        <section class="about-me slide-in-right">
         <div class="about-me content">    
             <h3>Things about me</h3>
             <h3>As a computer science student</h3>
@@ -155,7 +188,7 @@ REGION FUNCTION
         <!--
         Section for skills 
         -->
-        <section class="skills">
+        <section class="skills slide-in-left">
     <div class="skills-group">
         <b><h3>Languages that I'm kinda proficient in </h3></b>
         
