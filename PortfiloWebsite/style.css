@@ -176,7 +176,20 @@ input:checked + .slider:before {
     margin-bottom: 30px;
     max-width: 500px;
 }
+.home-flex {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
 
+.About-img img {
+    width: 220px; /* Adjust size as needed */
+    border-radius: 12px;
+}
+
+.home-information {
+    flex: 1;
+}
 /* Image container on the right */
 .About-img {
     flex: 0 0 350px; /* Fixed width, no grow/shrink */
