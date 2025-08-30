@@ -175,6 +175,7 @@ input:checked + .slider:before {
     color: #ccc;
     margin-bottom: 30px;
     max-width: 500px;
+    text-align: justify;
 }
 .home-flex {
     display: flex;

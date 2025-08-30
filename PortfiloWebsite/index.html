@@ -95,6 +95,24 @@ REGION FUNCTION
     opacity: 0;
     animation: slideInRight 1s ease-out forwards;
     }
+
+/* Sliding text animation */
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-text {
+    opacity: 0;
+    animation: slideInText 1.5s ease-out forwards;
+    animation-delay: 0.5s; /* Delay to make it appear after other elements */
+}
         </style>
     
         
@@ -140,7 +158,7 @@ REGION FUNCTION
             <div class="home-infortmation slide-in-left">
                 <h1 class="animated-header">Hello <span>I'm Kyle<br></span>I a computer science student</h1>
                 <br>
-                <p class="align-left">
+                <p class="align-left slide-in-text">
                     Currently I'm a second year at Durham College taking computer science and I'm 18 years old with 
                     with somewhat experience in programming and doing some web development. I have a passion for coding 
                     or development since taking a computer science class in high school and i want to pursue a career either 
@@ -154,11 +172,11 @@ REGION FUNCTION
             </div>
         </div>
         </section>
-         <!--
+        
+        <!--
         Two sections for images one for the about me and the information  
        -->
-
-        <br>
+        
         <div class="about-flex">
         <section class="about-me slide-in-right">
         <div class="about-me content">    
