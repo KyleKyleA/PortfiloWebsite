@@ -581,3 +581,67 @@ ul {
     }
     
 }
+
+/*SECTION USED FOR PERSONAL PROJECT PAGE*/
+
+.resume-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20 px;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+/*LAYOUT FOR EACH PROJECT CARD RIGHT NOW WE HAVE 4 PROJECT CARDS ADDING MORE LATER*/
+.personal-projects {
+    background-color: #111;
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*HOVER EFFECT*/
+.personal-projects:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+
+}
+
+.personal-projects img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Project Title */
+.personal-projects h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #1db954; /* Spotify green for accent */
+}
+
+/* Project Description */
+.personal-projects p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* GitHub Link */
+.personal-projects a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1db954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.personal-projects a:hover {
+  text-decoration: underline;
+}
