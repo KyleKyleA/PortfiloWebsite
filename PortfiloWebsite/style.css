@@ -650,6 +650,22 @@ ul {
   text-decoration: underline;
 }
 
+/*STYLING FOR THE VIEW AND DOWNLOAD RESUME BTN*/
+.resume-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007fff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.resume-btn:hover {
+    background: #005fcc;
+}
 
 
 
