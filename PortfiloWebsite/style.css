@@ -38,21 +38,24 @@ header {
     font-size: 24px;
 }
 
-/* Navigation */
-nav {
+.navbar a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;      /* Bold links */
+    font-size: 16px;
+    letter-spacing: 1px;   /* Slight spacing between letters */
+    color: inherit;        /* Keep default color */
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: orange;         /* Hover effect */
+}
+
+.navbar {
     display: flex;
-    gap: 20px;
+    gap: 25px;             /* Space between links */
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav a:hover {
-    color: orange;
-}
 
 /* Contact Button */
 .contact {
