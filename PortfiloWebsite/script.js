@@ -17,3 +17,13 @@ const toggle = document.getElementById('toggle');
     function projectsClicked() {
         alert("Projects button clicked! You can add your custom action here.");
     }
+
+/*FUNCTION FOR THE CONTACT ME BUTTON */
+window.addEventListener("load", () => {
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+});
