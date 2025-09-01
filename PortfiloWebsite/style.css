@@ -668,4 +668,57 @@ ul {
 }
 
 
+.service-to-clients {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.service-to-clients h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.services-wrapper > div {
+  flex: 0 0 300px; /* width of each card */
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-wrapper > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.15);
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.slide-btn.prev { left: 10px; }
+.slide-btn.next { right: 10px; }
+
+.slide-btn:hover {
+  background: #007fff;
+}
+
 

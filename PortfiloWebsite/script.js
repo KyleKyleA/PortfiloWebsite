@@ -33,13 +33,12 @@ const wrapper = document.querySelector('.services-wrapper');
 const nextBtn = document.querySelector('.slide-btn.next');
 const prevBtn = document.querySelector('.slide-btn.prev');
 
-
 let currentIndex = 0;
-const cardWidth = 320;
+const cardWidth = 320; // width + gap
 const totalCards = document.querySelectorAll('.services-wrapper > div').length;
 
-nextBtn.addEventListener('click', () =>{
-    if (currentIndex < totalCards - 1 ) {
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalCards - 1) {
         currentIndex++;
         wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
@@ -48,6 +47,6 @@ nextBtn.addEventListener('click', () =>{
 prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
-         wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
-})
+});
