@@ -668,57 +668,78 @@ ul {
 }
 
 
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
 .service-to-clients {
-  position: relative;
-  max-width: 1000px;
-  margin: 50px auto;
-  overflow: hidden;
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .service-to-clients h2 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff6600;
 }
 
 .services-wrapper {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    justify-content: center;
+    cursor: grab;
+}
+
+.services-wrapper:active {
+    cursor: grabbing;
 }
 
 .services-wrapper > div {
-  flex: 0 0 300px; /* width of each card */
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 320px;
+    background: #222;
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(255, 102, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.services-wrapper > div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 12px 24px rgba(0,0,0,0.15);
+/* Scale active card */
+.services-wrapper > div.active {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 30px rgba(255, 102, 0, 0.7);
 }
 
+/* Buttons */
 .slide-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #111;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 50%;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 102, 0, 0.8);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.slide-btn:hover {
+    background: #ff6600;
 }
 
 .slide-btn.prev { left: 10px; }
 .slide-btn.next { right: 10px; }
-
-.slide-btn:hover {
-  background: #007fff;
-}
-
 

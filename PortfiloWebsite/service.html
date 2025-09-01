@@ -13,6 +13,31 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+         <header class="header">
+            <a href="#" class="logo"><span>Ky</span><span>le</span>
+            </a>
+        <!--
+            Navigation bar for employer trying to look at my portfolio
+            -->
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="project.html">Projects</a>
+                <a href="#">Skills</a>
+                <a href="service.html">services</a>
+            </nav>
+            <!--
+            Added a cool feature beside the contact me button and added a light mode and dark mode for the user 
+            -->
+            <a href="index.html#contact" class="contact">Contact Me</a>
+
+             <div class="light-dark toggle">
+                <label class="switch">
+                    <input type="checkbox" id="toggle">
+                    <span class="slider"></span>
+                </label>
+             </div>
+        </header>
         <!-- All my services right now that I can provide as a student-->
         <section class="service-to-clients">
             
@@ -50,10 +75,11 @@
             </div>
          </div>
         </section>
+        
         <!-- END OF THE SECTION-->
 
-        <button class="slide-btn prev">&#10094</button>
-        <button class="slide-btn next">&#10095</button>
+        <button class="slide-btn prev">&#10094;</button>
+        <button class="slide-btn next">&#10095;</button>
         
         <script src="script.js"></script>
     </body>

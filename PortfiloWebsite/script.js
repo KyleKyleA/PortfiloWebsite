@@ -1,52 +1,104 @@
-const toggle = document.getElementById('toggle');
-        // Set initial state based on body class
-        toggle.checked = document.body.classList.contains('light-mode');
-        toggle.addEventListener('change', () => {
-            if (toggle.checked) {
-                document.body.classList.remove('dark-mode');
-                document.body.classList.add('light-mode');
-            } else {
-                document.body.classList.remove('light-mode');
-                document.body.classList.add('dark-mode');
-            }
-        });
-
-         function hireMeClicked() {
-        alert("Hire Me button clicked! You can add your custom action here.");
-    }
-    function projectsClicked() {
-        alert("Projects button clicked! You can add your custom action here.");
-    }
-
-/*FUNCTION FOR THE CONTACT ME BUTTON */
-window.addEventListener("load", () => {
-    if (window.location.hash) {
-        const target = document.querySelector(window.location.hash);
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-        }
-    }
-});
-
-/* FUNCTION FOR THE SLIDING FEATURE CARDS */
 const wrapper = document.querySelector('.services-wrapper');
+const cards = document.querySelectorAll('.services-wrapper > div');
 const nextBtn = document.querySelector('.slide-btn.next');
 const prevBtn = document.querySelector('.slide-btn.prev');
 
-let currentIndex = 0;
-const cardWidth = 320; // width + gap
-const totalCards = document.querySelectorAll('.services-wrapper > div').length;
+const cardWidth = 320; // Must match CSS
+let currentIndex = 1;   // Start from first real card
 
+// Clone first and last for infinite loop
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cards.length - 1].cloneNode(true);
+
+wrapper.appendChild(firstClone);
+wrapper.insertBefore(lastClone, wrapper.firstChild);
+
+const allCards = wrapper.querySelectorAll('div'); // includes clones
+
+function updateCarousel(animate = true) {
+    const containerWidth = wrapper.parentElement.offsetWidth;
+    const offset = (containerWidth - cardWidth) / 2;
+    const translate = -currentIndex * cardWidth + offset;
+
+    wrapper.style.transition = animate ? 'transform 0.5s ease' : 'none';
+    wrapper.style.transform = `translateX(${translate}px)`;
+
+    allCards.forEach((card, index) => {
+        card.classList.toggle('active', index === currentIndex);
+    });
+}
+
+// Initial render
+updateCarousel(false);
+
+// Buttons
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < totalCards - 1) {
-        currentIndex++;
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    currentIndex++;
+    updateCarousel();
+
+    if (currentIndex >= allCards.length - 1) {
+        setTimeout(() => {
+            currentIndex = 1;
+            updateCarousel(false);
+        }, 500);
     }
 });
 
 prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        wrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    currentIndex--;
+    updateCarousel();
+
+    if (currentIndex <= 0) {
+        setTimeout(() => {
+            currentIndex = allCards.length - 2;
+            updateCarousel(false);
+        }, 500);
     }
 });
+
+// Drag / Swipe
+let isDragging = false;
+let startPos = 0;
+
+wrapper.addEventListener('mousedown', startDrag);
+wrapper.addEventListener('touchstart', startDrag);
+
+wrapper.addEventListener('mousemove', drag);
+wrapper.addEventListener('touchmove', drag);
+
+wrapper.addEventListener('mouseup', endDrag);
+wrapper.addEventListener('mouseleave', endDrag);
+wrapper.addEventListener('touchend', endDrag);
+
+function startDrag(e) {
+    isDragging = true;
+    startPos = getPositionX(e);
+    wrapper.style.transition = 'none';
+}
+
+function drag(e) {
+    if (!isDragging) return;
+    const currentPosition = getPositionX(e);
+    const diff = currentPosition - startPos;
+    const containerWidth = wrapper.parentElement.offsetWidth;
+    const offset = (containerWidth - cardWidth) / 2;
+    wrapper.style.transform = `translateX(${-currentIndex * cardWidth + offset + diff}px)`;
+}
+
+function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    const endPos = getPositionX(e);
+    const diff = endPos - startPos;
+
+    if (diff < -50) nextBtn.click();
+    else if (diff > 50) prevBtn.click();
+    else updateCarousel();
+}
+
+function getPositionX(e) {
+    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+}
+
+// Responsive
+window.addEventListener('resize', () => updateCarousel(false));
