@@ -13,6 +13,7 @@ REGION FUNCTION
     <head>
         <meta charset="utf-8"></meta>
         <Title>Kyle's Portfolio website</Title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--
         Link to the google fonts for this project
         -->
@@ -120,8 +121,8 @@ REGION FUNCTION
         <!--
         Place for the logo
         -->
-        <header class="header">
-            <a href="#" class="logo"><span>Ky</span><span>le</span>
+            <a href="#" class="logo" title="Kyle's Portfolio"><span>Ky</span><span>le</span>
+            </a>
             </a>
         <!--
             Navigation bar for employer trying to look at my portfolio
@@ -140,7 +141,8 @@ REGION FUNCTION
 
              <div class="light-dark toggle">
                 <label class="switch">
-                    <input type="checkbox" id="toggle">
+                    <label for="toggle" class="visually-hidden">Toggle Light/Dark Mode</label>
+                    <input type="checkbox" id="toggle" title="Toggle Light/Dark Mode">
                     <span class="slider"></span>
                 </label>
              </div>
@@ -192,7 +194,7 @@ REGION FUNCTION
                 <li>Listening to music</li>
             </ul>
             <p class="align-left">This just samples and explains my extracurricular or hobbies i have outside of coding and doing school work that balances my workflow and social life with others. </p>
-            <br>
+            <a href="#" class="btn-2" title="View my experiences">Experiences</a>  
             <a href="#" class="btn-2">Experiences</a>  
         </div>      
     </section>
@@ -318,9 +320,9 @@ REGION FUNCTION
             <footer class="footer">
     <div>Connect with me</div>
     <div class="footer-social-icons">
-        <a href="https://github.com/KyleKyleA/PortfiloWebsite" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/kyle-angeles-b07ba7315/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.youtube.com/@NolimitlessKay" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://github.com/KyleKyleA/PortfiloWebsite" target="_blank" rel="noopener noreferrer" title="GitHub Repository"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kyle-angeles-b07ba7315/" target="_blank" rel="noopener noreferrer" title="Visit my LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@NolimitlessKay" target="_blank" rel="noopener noreferrer" title="Visit my YouTube channel"><i class="fab fa-youtube"></i></a>
     </div>
 </footer> 
         </section>
