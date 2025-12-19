@@ -1,28 +1,85 @@
 /* General page styling */
-    .dark-mode {
-        background-color: #181818;
-        color: #f5f5f5;
-    }
+.dark-mode {
+    background-color: #181818;
+    color: #f5f5f5;
+}
+/* Light mode styles */
+.light-mode {
+    background-color: #f5f5f5;
+    color: #181818;
+}
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    gap: 20px;
+    max-width: 250px;
+    margin: 20px ;
+    padding:  20px;
+}
+/* Individual skill box styling */
+.skills-box1 {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: black;
+}
 
-    /* Light mode styles */
-    .light-mode {
-        background-color: #f5f5f5;
-        color: #181818;
-    }
+.skills-box1 h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
 
-    /* Header styling */
-    h1 {
-        text-align: center;
-        margin-top: 20px;
-    }
+.skills-box1 ul {
+    line-height: 1.3;
+    padding-left: 18px;
+    margin: 0;
+}
 
-    .skills-box1 {
-        max-width: 250px;
-        margin: 20px auto;
-        padding: 20px;
-        border: 2px solid #ccc;
-        border-radius: 10px;
-        background-color: black;
-        margin-left: 270px;
-        padding-left: 20px;
-    }
+.skills-box1 ul li {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.skills-content {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.skills-gif {
+    width: 40px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+
+/*-------------------------------*/
+.skills-box2 {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.skills-box3 {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: black;
+}
+

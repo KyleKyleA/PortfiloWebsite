@@ -337,19 +337,28 @@ ul {
     }
     
     /* About me section responsive */
-    .about-me {
-        padding: 0 20px;
-        margin-top: 30px;
-    }
-    
-    .about-me h3:first-child {
-        font-size: 1.8rem;
-    }
-    
-    .about-me h3 {
-        font-size: 1.3rem;
-    }
-    
+    .about-me p {
+    color: white;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.about-me h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.about-me ul {
+    color: white;
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.about-me li {
+    color: white;
+    margin-bottom: 8px;
+}
     .About-img {
         flex: none;
         order: 0; /* Image first on mobile */
